@@ -31,4 +31,3 @@ Emotionele afstemming: Designelementen die reageren op de emotionele toestanden 
 
 [Content](https://github.com/fdnd-agency/drop-and-heal/tree/main/content)
 
-[API](...)
