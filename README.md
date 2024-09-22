@@ -25,7 +25,7 @@ Emotionele afstemming: Designelementen die reageren op de emotionele toestanden 
 
 ## Resources
 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/37)
+<!-- [Backlog](https://github.com/orgs/fdnd-agency/projects/37) -->
 
 [Design](https://github.com/fdnd-agency/drop-and-heal/tree/main/design)
 
