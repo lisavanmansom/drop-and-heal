@@ -1,0 +1,32 @@
+:root {
+    --w: #FFFF;
+    --b: #111;
+    --rt-1: #64AAC7;
+    --rt-2: #984A4A;
+    --rt-3: #6E9158;
+    --rt-4: #7C6097;
+
+  }
+
+  @font-face {
+    font-family: Calvino;
+    src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: Figtree;
+    src: url(../font/figtree/Figtree-Regular.ttf);
+    font-weight: 200;
+  }
+
+* {
+    font-family: Figtree;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+  }
+
+*::-webkit-scrollbar {display: none;}
