@@ -20,6 +20,12 @@
     font-weight: 200;
   }
 
+  @font-face {
+    font-family: dm-serif;
+    src: url(../font/dm-serif/DMSerifDisplay-Regular.ttf);
+    font-weight: 100;
+  }
+
 * {
     font-family: Figtree;
     scroll-behavior: smooth;
