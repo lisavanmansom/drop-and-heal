@@ -34,7 +34,4 @@
       color: #000111;
     }
 
-    p {
-      color: #fff;
-    }
   </style>
