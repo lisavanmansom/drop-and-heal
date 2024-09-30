@@ -21,11 +21,20 @@
   
   <style>
     .chatroom {
-      max-width: 400px;
+      max-width: 100%;
+      height: 100vh;
       margin: 40px auto;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #000111;
+    }
+
+    p {
+      color: #fff;
     }
   </style>
