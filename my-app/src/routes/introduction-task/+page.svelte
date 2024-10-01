@@ -9,15 +9,16 @@
 
   import {MeshgradBlue, MeshgradRed, MeshgradGreen, MeshgradPink, ArrowL, ArrowR} from '$lib'
 
+  let current = 1;
 
 </script>
 
-<main>
-    <section>
-        <h1>Introductie rouwtaken</h1>
-    </section>
+<header>
+    <h1>Introductie rouwtaken</h1>
+</header>
 
-      <section id="rt-1">
+<main>
+      <section id="rt-1" class:show={current === 1} class:hide={current != 1}>
         <h2>Rouwtaak <em>1</em></h2>
         <h3>Het verlies aanvaarden</h3>
         <p>Ontdek hoe je de realiteit van het verlies kunt omarmen.</p> 
@@ -27,12 +28,12 @@
         <progress value="20" max="100"></progress>
 
         <div class="d-a">
-            <a href="#rt-2"><ArrowR /></a>
+            <a href="#rt-2" on:click={() => current = 2}><ArrowR /></a>
         </div>
       </section>
 
 
-    <section id="rt-2">
+    <section id="rt-2" class:show={current === 2} class:hide={current != 2}>
         <h2>Rouwtaak <em>2</em></h2>
         <h3>De pijn doorvoelen</h3>
         <p>Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken. </p>
@@ -40,14 +41,14 @@
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
         <progress value="40" max="100"></progress>
-
+        
         <div class="d-a">
-            <a href="#rt-1"><ArrowL /></a>
-            <a href="#rt-3"><ArrowR /></a>
+            <a href="#rt-1" on:click={() => current = 1}><ArrowL /></a>
+            <a href="#rt-3" on:click={() => current = 3}><ArrowR /></a>
         </div>
     </section>
 
-    <section id="rt-3">
+    <section id="rt-3" class:show={current === 3} class:hide={current !== 3}>
         <h2>Rouwtaak <em>3</em></h2>
         <h3>Verder in verandering</h3>
         <p>Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare.</p>
@@ -57,12 +58,12 @@
         <progress value="60" max="100"></progress>
 
         <div class="d-a">
-            <a href="#rt-2"><ArrowL /></a>
-            <a href="#rt-4"><ArrowR /></a>
+            <a href="#rt-2" on:click={() => current = 2}><ArrowL /></a>
+            <a href="#rt-4" on:click={() => current = 4}><ArrowR /></a>
         </div>
     </section>
 
-    <section id="rt-4">
+    <section id="rt-4" class:show={current === 4} class:hide={current != 4}>
         <h2>Rouwtaak <em>4</em></h2>
         <h3>Emotioneel verder gaan</h3>
         <p>Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.</p>
@@ -72,12 +73,12 @@
         <progress value="80" max="100"></progress>
 
         <div class="d-a">
-            <a href="#rt-3" class="test"><ArrowL /></a>
-            <a href="#rt-3"><ArrowR /></a>
+            <a href="#rt-3" on:click={() => current = 3}>
+                <ArrowL />
+            </a>
+            
         </div>
-
     </section>
-
 </main>
 
 
@@ -104,10 +105,12 @@
         width: 100%;
     }
 
-    section:nth-of-type(1) {
-        margin: 2em 0 0 0;
-        padding: .5em 2em;
+    header {
+        background-color: var(--b);
+        color: var(--w);
+        padding: 2em 2em .5em 2em;
         text-align: left;
+        display: block;
     }
 
     /* sections w. griefing-tasks */
@@ -115,12 +118,14 @@
         align-items: center;
         background-color: var(--b);
         display: grid;
-        position: absolute;
         grid-template-columns: repeat(5, 20%);
-        grid-template-rows: repeat(10, 9.1%);
+        grid-template-rows: repeat(10, 60px); /* no responsive units grid-rows */
         padding: 2em;
         min-height: 100vh;
         width: 100%;
+
+        position: absolute;
+        transition: opacity 1s ease, visibility 0.5s ease;
     }
 
     section h2 {
@@ -145,14 +150,14 @@
         padding: 0.5em;
     }
 
-     /* div w. arrows */
+    /* div w. arrows */
     .d-a {
         display: flex;
         flex-direction: row;
         gap: 1.5em;
         justify-content: center;
         grid-column: 1 / -1;
-        grid-row: 11 / -1;
+        grid-row: 10 / -1;
     }
 
     progress {
@@ -198,8 +203,17 @@
         border: .2em solid var(--b-4);
     }
 
-    #rt-4:target a {
-        background-color: gold;
+    .show {
+        opacity: 1;
+        visibility: visible;
     }
+
+    .hide {
+        opacity: 0;
+        visibility: hidden;
+     }
+
+    
+
 
 </style>
