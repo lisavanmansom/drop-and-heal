@@ -2,5 +2,10 @@
 
  
 <style>
-    img {width: 13em; height: 13em;}
+    img {
+        height: 13em; 
+        width: 13em; 
+        grid-column: 1 / 5;
+        grid-row: 3 / 5;
+    }
 </style>

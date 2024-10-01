@@ -20,15 +20,15 @@
       <section id="rt-1">
         <h2>Rouwtaak <em>1</em></h2>
         <h3>Het verlies aanvaarden</h3>
-        <p>Ontedek hoe je de realiteit van het verlies kunt omarmen.</p> 
-        <MeshgradBlue />
+        <p>Ontdek hoe je de realiteit van het verlies kunt omarmen.</p> 
+        <MeshgradBlue class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
         <progress value="20" max="100"></progress>
 
-        <a href="#rt-1">
-          <ArrowR />
-        </a>
+        <div class="d-a">
+            <a href="#rt-2"><ArrowR /></a>
+        </div>
       </section>
 
 
@@ -36,45 +36,45 @@
         <h2>Rouwtaak <em>2</em></h2>
         <h3>De pijn doorvoelen</h3>
         <p>Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken. </p>
-        <MeshgradRed />
+        <MeshgradRed class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
         <progress value="40" max="100"></progress>
 
-        <a href="#rt-1">
-            <ArrowL /></a>
-        <a href="#rt-3">
-            <ArrowR /></a>
+        <div class="d-a">
+            <a href="#rt-1"><ArrowL /></a>
+            <a href="#rt-3"><ArrowR /></a>
+        </div>
     </section>
 
     <section id="rt-3">
         <h2>Rouwtaak <em>3</em></h2>
         <h3>Verder in verandering</h3>
         <p>Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare.</p>
-        <MeshgradGreen />
+        <MeshgradGreen class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
         <progress value="60" max="100"></progress>
 
-        <a href="#rt-2">
-            <ArrowL /></a>
-        <a href="#rt-4">
-            <ArrowR /></a>
+        <div class="d-a">
+            <a href="#rt-2"><ArrowL /></a>
+            <a href="#rt-4"><ArrowR /></a>
+        </div>
     </section>
 
     <section id="rt-4">
         <h2>Rouwtaak <em>4</em></h2>
         <h3>Emotioneel verder gaan</h3>
         <p>Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.</p>
-        <MeshgradPink />
+        <MeshgradPink class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
         <progress value="80" max="100"></progress>
 
-        <a href="#rt-3">
-            <ArrowL /></a>
-        <a href="#rt-3">
-            <ArrowR /></a>
+        <div class="d-a">
+            <a href="#rt-3" class="test"><ArrowL /></a>
+            <a href="#rt-3"><ArrowR /></a>
+        </div>
 
     </section>
 
@@ -83,13 +83,13 @@
 
 <style>
     
-    h1, h2 {
-        font-family: Calvino;
-    }
+    h1, h2  { font-family: Calvino; }
+    h1      { font-size: 2em; font-weight: 600; }
+    h2      { font-weight: 100; font-size: 1.6em;}
+    h3      { font-weight: 100; text-wrap: nowrap;}
 
-    em {
-        font-family: dm-serif;
-    }
+    em      { font-family: dm-serif; font-size: 1em; font-style: normal; margin: 0 .25em;}
+    p       { color: var(--g); font-weight: 100;}
 
     main {
         align-items: center;
@@ -99,17 +99,87 @@
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
+        position: relative;
         min-height: 100vh;
         width: 100%;
     }
 
-    section {
+    section:nth-of-type(1) {
+        margin: 2em 0 0 0;
+        padding: .5em 2em;
+        text-align: left;
+    }
+
+    /* sections w. griefing-tasks */
+    #rt-1, #rt-2, #rt-3, #rt-4 {
+        align-items: center;
+        background-color: var(--b);
+        display: grid;
+        position: absolute;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(10, 9.1%);
+        padding: 2em;
         min-height: 100vh;
+        width: 100%;
+    }
+
+    section h2 {
+        grid-column: 1 / 5;
+        grid-row: 7 / 8;
+    }
+
+    section h3 {
+        grid-column: 1 / 5;
+        grid-row: 7 / 9;
+    }
+
+    section p {
+        grid-column: 1 / 5;
+        grid-row: 8 / 10;
     }
 
     section a {
-        padding: 1.2em 0.7em 0.5em 0.7em;
         border-radius: 50%;
+        height: 3em;
+        width: 3em;
+        padding: 0.5em;
+    }
+
+     /* div w. arrows */
+    .d-a {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5em;
+        justify-content: center;
+        grid-column: 1 / -1;
+        grid-row: 11 / -1;
+    }
+
+    progress {
+        grid-column: 1 / 5;
+        grid-row: -12 / 1;
+    }
+
+    progress[value] {
+        appearance: none;
+        border: none;
+        height: .2em;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        width: 15em;
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background-color: var(--progress-bg);
+        border-radius: 20px;
+    }
+
+    progress[value]::-webkit-progress-value {
+        background-color: var(--w);
+    }
+
+    #rt-4 p {
+        margin: 1em 0 0 0;
     }
 
     #rt-1 a {
@@ -117,7 +187,7 @@
     }
 
     #rt-2 a {
-        border: .2em solid var(--rt-2);
+        border: .2em solid var(--b-2);
     }
 
     #rt-3 a {
@@ -125,7 +195,11 @@
     }
 
     #rt-4 a {
-        border: .2em solid var(--rt-4);
+        border: .2em solid var(--b-4);
+    }
+
+    #rt-4:target a {
+        background-color: gold;
     }
 
 </style>
