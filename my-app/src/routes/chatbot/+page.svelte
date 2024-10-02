@@ -12,10 +12,10 @@
     <h1>Chatroom</h1>
     <ul>
       {#each messages as message}
-        <li class="speech-bubble">{message.text} ({new Date(message.timestamp).toLocaleTimeString()})</li>
+        <li>{message.text} ({new Date(message.timestamp).toLocaleTimeString()})</li>
       {/each}
     </ul>
-    <input type="text" bind:value={newMessage} />
+    <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
     <button on:click={sendMessage}>Verstuur</button>
   </div>
   
@@ -34,7 +34,7 @@
 
     h1 {
       color: #000111;
-      text-align: center;
+      
     }
 
     ul li {
@@ -42,9 +42,9 @@
       position: relative;
       width: 200px;
       height: 100px;
-      color: #303030;
-      background-color: #ebebeb;
-      border: 2px solid #000111;
+      color: #f5f5f5;
+      background-color: #1f1f1f;
+      border: 2px solid #1f1f1f;
       border-radius: 10px;
       padding: 20px;
       margin: 2.5em;
@@ -62,12 +62,11 @@
       width: 0;
 }
 
-button {
+input[type=text] {
+  padding: .8em;
 
 }
 
-input {
-  margin: auto;
-}
+
 
   </style>
