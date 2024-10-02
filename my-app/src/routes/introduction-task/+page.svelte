@@ -13,134 +13,120 @@
 
 </script>
 
-<header>
-    <h1>Introductie rouwtaken</h1>
-</header>
-
 <main>
+    <h1>Introductie rouwtaken</h1>
+
       <section id="rt-1" class:show={current === 1} class:hide={current != 1}>
-        <h2>Rouwtaak <em>1</em></h2>
-        <h3>Het verlies aanvaarden</h3>
-        <p>Ontdek hoe je de realiteit van het verlies kunt omarmen.</p> 
+        <article>
+            <h2>Rouwtaak <em>1</em></h2>
+            <h3>Het verlies aanvaarden</h3>
+            <p>Ontdek hoe je de realiteit van het verlies kunt omarmen.</p> 
+            <div class="d-a">
+                <a href="#rt-2" on:click={() => current = 2}><ArrowR /></a>
+            </div>
+        </article>
+        
         <MeshgradBlue class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
-        <progress value="20" max="100"></progress>
-
-        <div class="d-a">
-            <a href="#rt-2" on:click={() => current = 2}><ArrowR /></a>
-        </div>
+            <progress value="20" max="100"></progress>
       </section>
 
-
     <section id="rt-2" class:show={current === 2} class:hide={current != 2}>
-        <h2>Rouwtaak <em>2</em></h2>
-        <h3>De pijn doorvoelen</h3>
-        <p>Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken. </p>
+        <article>
+            <h2>Rouwtaak <em>2</em></h2>
+            <h3>De pijn doorvoelen</h3>
+            <p>Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken. </p>
+            <div class="d-a">
+                <a href="#rt-1" on:click={() => current = 1}><ArrowL /></a>
+                <a href="#rt-3" on:click={() => current = 3}><ArrowR /></a>
+            </div>
+        </article>
+
         <MeshgradRed class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
-        <progress value="40" max="100"></progress>
-        
-        <div class="d-a">
-            <a href="#rt-1" on:click={() => current = 1}><ArrowL /></a>
-            <a href="#rt-3" on:click={() => current = 3}><ArrowR /></a>
-        </div>
+            <progress value="40" max="100"></progress>
     </section>
 
     <section id="rt-3" class:show={current === 3} class:hide={current !== 3}>
-        <h2>Rouwtaak <em>3</em></h2>
-        <h3>Verder in verandering</h3>
-        <p>Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare.</p>
+        <article>
+            <h2>Rouwtaak <em>3</em></h2>
+            <h3>Verder in verandering</h3>
+            <p>Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare.</p>
+            <div class="d-a">
+                <a href="#rt-2" on:click={() => current = 2}><ArrowL /></a>
+                <a href="#rt-4" on:click={() => current = 4}><ArrowR /></a>
+            </div>
+        </article>
+
         <MeshgradGreen class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
-        <progress value="60" max="100"></progress>
-
-        <div class="d-a">
-            <a href="#rt-2" on:click={() => current = 2}><ArrowL /></a>
-            <a href="#rt-4" on:click={() => current = 4}><ArrowR /></a>
-        </div>
+            <progress value="60" max="100"></progress>
     </section>
 
     <section id="rt-4" class:show={current === 4} class:hide={current != 4}>
-        <h2>Rouwtaak <em>4</em></h2>
-        <h3>Emotioneel verder gaan</h3>
-        <p>Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.</p>
+        <article>
+            <h2>Rouwtaak <em>4</em></h2>
+            <h3>Emotioneel verder gaan</h3>
+            <p>Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.</p>
+            <div class="d-a">
+                <a href="#rt-3" on:click={() => current = 3}><ArrowL /></a>
+            </div>
+        </article>
+        
         <MeshgradPink class="meshgrad" />
 
         <div aria-busy="true" aria-describedby="progress-bar"></div>
-        <progress value="80" max="100"></progress>
-
-        <div class="d-a">
-            <a href="#rt-3" on:click={() => current = 3}>
-                <ArrowL />
-            </a>
-            
-        </div>
+            <progress value="80" max="100"></progress>
     </section>
 </main>
 
-
 <style>
-    
     h1, h2  { font-family: Calvino; }
-    h1      { font-size: 2em; font-weight: 600; }
+    h1      { font-size: 2em; font-weight: 600; z-index:2; max-width: 8em; padding: 0 0 0 1em;}
     h2      { font-weight: 100; font-size: 1.6em;}
-    h3      { font-weight: 100; text-wrap: nowrap;}
+    h3      { font-weight: 100; text-wrap: nowrap; font-size: 1.3em;}
 
     em      { font-family: dm-serif; font-size: 1em; font-style: normal; margin: 0 .25em;}
-    p       { color: var(--g); font-weight: 100;}
+    p       { color: var(--g); font-weight: 100; font-size: 1.2em;}
 
     main {
-        align-items: center;
         background-color: var(--b);
         color: var(--w);
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        overflow: hidden;
+        overflow-x: hidden;
+        padding: 2em 0;
         position: relative;
         min-height: 100vh;
         width: 100%;
-    }
-
-    header {
-        background-color: var(--b);
-        color: var(--w);
-        padding: 2em 2em .5em 2em;
         text-align: left;
-        display: block;
     }
 
     /* sections w. griefing-tasks */
     #rt-1, #rt-2, #rt-3, #rt-4 {
-        align-items: center;
+        align-items: stretch;
         background-color: var(--b);
-        display: grid;
-        grid-template-columns: repeat(5, 20%);
-        grid-template-rows: repeat(10, 60px); /* no responsive units grid-rows */
-        padding: 2em;
-        min-height: 100vh;
-        width: 100%;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 4em 2em 2em 2em;
         position: absolute;
+        min-height: 100vh;
         transition: opacity 1s ease, visibility 0.5s ease;
+        width: 100%;
     }
 
-    section h2 {
-        grid-column: 1 / 5;
-        grid-row: 7 / 8;
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
     }
 
-    section h3 {
-        grid-column: 1 / 5;
-        grid-row: 7 / 9;
-    }
-
-    section p {
-        grid-column: 1 / 5;
-        grid-row: 8 / 10;
+    article div {
+        padding: 2em 0 0 0;
     }
 
     section a {
@@ -155,14 +141,11 @@
         display: flex;
         flex-direction: row;
         gap: 1.5em;
-        justify-content: center;
-        grid-column: 1 / -1;
-        grid-row: 10 / -1;
+        justify-content: space-around;
     }
 
     progress {
-        grid-column: 1 / 5;
-        grid-row: -12 / 1;
+        order: -2;
     }
 
     progress[value] {
@@ -171,7 +154,7 @@
         height: .2em;
         -moz-appearance: none;
         -webkit-appearance: none;
-        width: 15em;
+        min-width: 90%;
     }
 
     progress[value]::-webkit-progress-bar {
@@ -187,21 +170,13 @@
         margin: 1em 0 0 0;
     }
 
-    #rt-1 a {
-        border: .2em solid var(--rt-1);
-    }
+    #rt-1 a { border: .2em solid var(--rt-1); }
 
-    #rt-2 a {
-        border: .2em solid var(--b-2);
-    }
+    #rt-2 a { border: .2em solid var(--b-2); }
 
-    #rt-3 a {
-        border: .2em solid var(--rt-3);
-    }
+    #rt-3 a { border: .2em solid var(--rt-3); }
 
-    #rt-4 a {
-        border: .2em solid var(--b-4);
-    }
+    #rt-4 a { border: .2em solid var(--b-4); }
 
     .show {
         opacity: 1;
@@ -213,7 +188,81 @@
         visibility: hidden;
      }
 
-    
+     @media (min-width:575px) {
+        h1      { padding: .75em 0 0 1.5em; }
+        p       { max-width: 20em; }
+
+        #rt-1, #rt-2, #rt-3, #rt-4 {
+            padding: 5.5em 4em 3em 3em;
+        }
+
+        article {
+            align-items: end;
+            gap: .75em;
+            margin: 2em 0 0 0;
+            text-align: end;
+        }
+
+        .d-a {
+            gap: 2em;
+            justify-content: end;
+        }
+
+        progress {
+            margin: 2em 0em;
+        }
+
+        progress[value] {
+            height: .25em;
+            min-width: 25em;
+        }
+     }
+
+     @media (min-width:875px) {
+        h1      { font-size: 2.5em; max-width: 10em;  }
+        h2      { font-size: 2.2em; }
+        h3      { font-size: 1.7em; }
+
+        em      { font-size: 1em; }
+        p       { font-size: 1.4em; max-width: 22em; }
+
+        #rt-1, #rt-2, #rt-3, #rt-4 {
+            padding: 7em 2em 0em 2em;
+        }
+
+        progress {
+            margin: 2em 2em;
+        }
+     }
+
+
+@media (min-width:1175px) {
+        #rt-1, #rt-2, #rt-3, #rt-4 {
+            padding: 7.5em 4em 3em 4em;
+        }
+
+        progress {
+            margin: 2em 0em;
+        }
+     }
+
+     @media (min-width:1500px) {
+
+        main {
+            place-items: center;
+        }
+
+        #rt-1, #rt-2, #rt-3, #rt-4 {
+        align-items: stretch;
+        justify-content: space-around;
+        width: 80em;
+        }
+
+        h1 {
+            transform: translateX(-430px);
+        }
+     }
+
 
 
 </style>

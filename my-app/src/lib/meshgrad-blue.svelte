@@ -3,9 +3,18 @@
  
 <style>
     img {
-        width: 13em; 
-        height: 13em;
-        grid-column: 1 / 5;
-        grid-row: 3 / 5;
+        height: 15em;
+        order: -1;
+        object-fit: contain;
+        width: 100%;
     }
+
+    @media (min-width:575px) {
+        img { height: 17.5em; }
+    }
+
+    @media (min-width:875px) {
+        img { height: 20em; }
+    }
+
 </style>
