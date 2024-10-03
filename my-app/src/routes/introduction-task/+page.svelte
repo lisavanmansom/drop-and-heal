@@ -11,32 +11,42 @@
 
   let current = 1;
 
+  let rt = "Rouwtaak"
+  let sub1 = "Het verlies aanvaarden"
+  let sub2 = "De pijn doorvoelen"
+  let sub3 = "Verder in verandering"
+  let sub4 = "Emotioneel verder gaan"
+  let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen."
+  let d2 = "Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken."
+  let d3 = "Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare."
+  let d4 = "Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven."
 </script>
 
 <main>
     <h1>Introductie rouwtaken</h1>
 
       <section id="rt-1" class:show={current === 1} class:hide={current != 1}>
-        <article>
-            <h2>Rouwtaak <em>1</em></h2>
-            <h3>Het verlies aanvaarden</h3>
-            <p>Ontdek hoe je de realiteit van het verlies kunt omarmen.</p> 
-            <div class="d-a">
-                <a href="#rt-2" on:click={() => current = 2}><ArrowR /></a>
-            </div>
-        </article>
+            <article>
+                <h2>{rt}<em>1</em></h2>
+                <h3>{sub1}</h3>
+                <p>{d1}</p> 
+
+                <div class="d-a">
+                    <a href="#rt-2" on:click={() => current = 2}><ArrowR /></a>
+                </div>
+            </article>
+
+            <MeshgradBlue class="meshgrad" />
         
-        <MeshgradBlue class="meshgrad" />
-        
-        <div aria-busy="true" aria-describedby="progress-bar"></div>
+            <div aria-busy="true" aria-describedby="progress-bar"></div>
             <progress value="20" max="100"></progress>
       </section>
 
     <section id="rt-2" class:show={current === 2} class:hide={current != 2}>
         <article>
-            <h2>Rouwtaak <em>2</em></h2>
-            <h3>De pijn doorvoelen</h3>
-            <p>Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken. </p>
+            <h2>{rt}<em>2</em></h2>
+            <h3>{sub2}</h3>
+            <p>{d2}</p>
             <div class="d-a">
                 <a href="#rt-1" on:click={() => current = 1}><ArrowL /></a>
                 <a href="#rt-3" on:click={() => current = 3}><ArrowR /></a>
@@ -51,9 +61,9 @@
 
     <section id="rt-3" class:show={current === 3} class:hide={current !== 3}>
         <article>
-            <h2>Rouwtaak <em>3</em></h2>
-            <h3>Verder in verandering</h3>
-            <p>Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare.</p>
+            <h2>{rt}<em>3</em></h2>
+            <h3>{sub3}</h3>
+            <p>{d3}</p>
             <div class="d-a">
                 <a href="#rt-2" on:click={() => current = 2}><ArrowL /></a>
                 <a href="#rt-4" on:click={() => current = 4}><ArrowR /></a>
@@ -68,9 +78,9 @@
 
     <section id="rt-4" class:show={current === 4} class:hide={current != 4}>
         <article>
-            <h2>Rouwtaak <em>4</em></h2>
-            <h3>Emotioneel verder gaan</h3>
-            <p>Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.</p>
+            <h2>{rt}<em>4</em></h2>
+            <h3>{sub4}</h3>
+            <p>{d4}</p>
             <div class="d-a">
                 <a href="#rt-3" on:click={() => current = 3}><ArrowL /></a>
             </div>
@@ -123,21 +133,13 @@
         width: 100%;
     }
 
-    #rt-1 {
-        background-image: url("/gradients/Gr-blue.png");
-    }
+    #rt-1 { background-image: url("/gradients/Gr-blue.png"); }
 
-    #rt-2 {
-        background-image: url("/gradients/Gr-red.png");
-    }
+    #rt-2 { background-image: url("/gradients/Gr-red.png"); }
 
-    #rt-3 {
-        background-image: url("/gradients/Gr-green.png");
-    }
+    #rt-3 {  background-image: url("/gradients/Gr-green.png"); }
 
-    #rt-4 {
-        background-image: url("/gradients/Gr-pink.png");
-    }
+    #rt-4 { background-image: url("/gradients/Gr-pink.png"); }
 
     article {
         display: flex;
@@ -146,9 +148,7 @@
         z-index: 2;
     }
 
-    article div {
-        padding: 2em 0 0 0;
-    }
+    article div { padding: 2em 0 0 0; }
 
     section a {
         border-radius: 50%;
@@ -165,9 +165,7 @@
         justify-content: space-around;
     }
 
-    progress {
-        order: -2;
-    }
+    progress { order: -2; }
 
     progress[value] {
         appearance: none;
@@ -183,13 +181,9 @@
         border-radius: 20px;
     }
 
-    progress[value]::-webkit-progress-value {
-        background-color: var(--w);
-    }
+    progress[value]::-webkit-progress-value { background-color: var(--w); }
 
-    #rt-4 p {
-        margin: 1em 0 0 0;
-    }
+    #rt-4 p { margin: 1em 0 0 0; }
 
     #rt-1 a { border: .2em solid var(--rt-1); }
 
@@ -213,9 +207,7 @@
         h1      { padding: .75em 0 0 1.5em; }
         p       { max-width: 20em; }
 
-        #rt-1, #rt-2, #rt-3, #rt-4 {
-            padding: 5.5em 4em 3em 3em;
-        }
+        #rt-1, #rt-2, #rt-3, #rt-4 { padding: 5.5em 4em 3em 3em; }
 
         article {
             align-items: end;
@@ -229,9 +221,7 @@
             justify-content: end;
         }
 
-        progress {
-            margin: 2em 0em;
-        }
+        progress { margin: 2em 0em; }
 
         progress[value] {
             height: .25em;
@@ -247,31 +237,21 @@
         em      { font-size: 1em; }
         p       { font-size: 1.4em; max-width: 22em; }
 
-        #rt-1, #rt-2, #rt-3, #rt-4 {
-            padding: 7em 2em 0em 2em;
-        }
+        #rt-1, #rt-2, #rt-3, #rt-4 { padding: 7em 2em 0em 2em; }
 
-        progress {
-            margin: 2em 2em;
-        }
+        progress { margin: 2em 2em; }
      }
 
 
 @media (min-width:1175px) {
-        #rt-1, #rt-2, #rt-3, #rt-4 {
-            padding: 7.5em 4em 3em 4em;
-        }
+        #rt-1, #rt-2, #rt-3, #rt-4 { padding: 7.5em 4em 3em 4em; }
 
-        progress {
-            margin: 2em 0em;
-        }
+        progress { margin: 2em 0em; }
      }
 
      @media (min-width:1500px) {
 
-        main {
-            place-items: center;
-        }
+        main { place-items: center; }
 
         #rt-1, #rt-2, #rt-3, #rt-4 {
             align-items: stretch;
@@ -279,8 +259,6 @@
             width: 80em;
         }
 
-        h1 {
-            transform: translateX(-430px);
-        }
+        h1 { transform: translateX(-430px); }
      }
 </style>

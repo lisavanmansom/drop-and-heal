@@ -1,8 +1,7 @@
-<img class="mesh-gr" src="/gradients/Meshgrad-blue.png" alt="" width="100" height="100" />
-
+<img src="/gradients/Meshgrad-blue.png" alt="" width="100" height="100" />
 
 <style>
-    .mesh-gr {
+    img {
         animation: aBlue 10s linear infinite;
         height: 15em;
         margin: 3em 0 1em 0;
@@ -13,20 +12,16 @@
     }
 
     @keyframes aBlue {
-    0% { 
-        transform: rotate(0); 
-    }
-    100% { 
-        transform: rotate(360deg);
-    }
+    0% {  transform: rotate(0); }
+    100% { transform: rotate(360deg); }
     }
 
     @media (min-width:575px) {
-        .mesh-gr { height: 17.5em; }
+        img { height: 17.5em; }
     }
 
     @media (min-width:875px) {
-        .mesh-gr { height: 20em; }
+        img { height: 20em; }
     }
 
 </style>
