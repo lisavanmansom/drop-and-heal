@@ -9,9 +9,7 @@
   </script>
 
   <main>
-    <section class="msg-header">
-      <h2>Chat</h2>
-    </section>
+
   
   <section class="chatroom">
     <h1>Chatroom</h1>
@@ -20,14 +18,18 @@
         <li>{message.text} ({new Date(message.timestamp).toLocaleTimeString()})</li>
       {/each}
     </ul>
+    
+    
     <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
     <button on:click={sendMessage}>Verstuur</button>
+ 
+
   </section>
 
-  <section class="msg-bottom">
-               
+ 
+
               
-  </section> 
+
   
 
 
@@ -36,24 +38,15 @@
   <style>
 
     main {
-       width: 80%;
+      display: flex;
+      justify-content: center;
+       width: 100%;
        margin: auto;
        margin-top: 2rem;
        letter-spacing: 0.5px;
-       height: 80%;
+       height: 100%;
     }
 
-    .msg-header {
-      border: 1px solid #ccc;
-      width: 100%;
-      height: 10%;
-      border-bottom: none;
-      display: inline-block;
-      background-color: #efefef;
-      margin: 0;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
     
     .chatroom {
       max-width: 100%;
@@ -68,7 +61,7 @@
     }
 
     h1 {
-      color: #000111;
+      color: #efefef;
       
     }
 
@@ -99,7 +92,41 @@
 
 input[type=text] {
   padding: .8em;
+  border-radius: 50px;
+  width: 90%;
+}
 
+input[type=text]:focus-visible {
+  outline: 2px solid teal;
+  border-radius: 3px;
+}
+
+
+
+    /* Desktop styles */
+@media only screen and (min-width: 1025px) {
+  .chatroom {
+    width: 100%;
+    margin: 40px auto;
+  }
+}
+
+    @media only screen and (max-width: 768px) {
+  .chatroom {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+/* styles here will apply to extra small mobile devices */
+@media only screen and (max-width: 480px) {
+  .chatroom {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  
 }
 
 
