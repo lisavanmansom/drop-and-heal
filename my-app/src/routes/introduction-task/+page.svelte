@@ -27,7 +27,7 @@
         </article>
         
         <MeshgradBlue class="meshgrad" />
-
+        
         <div aria-busy="true" aria-describedby="progress-bar"></div>
             <progress value="20" max="100"></progress>
       </section>
@@ -100,7 +100,7 @@
         overflow-x: hidden;
         padding: 2em 0;
         position: relative;
-        min-height: 100vh;
+        min-height: 100dvh;
         width: 100%;
         text-align: left;
     }
@@ -109,20 +109,41 @@
     #rt-1, #rt-2, #rt-3, #rt-4 {
         align-items: stretch;
         background-color: var(--b);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         padding: 4em 2em 2em 2em;
+        position: relative;
         position: absolute;
         min-height: 100vh;
         transition: opacity 1s ease, visibility 0.5s ease;
         width: 100%;
     }
 
+    #rt-1 {
+        background-image: url("/gradients/Gr-blue.png");
+    }
+
+    #rt-2 {
+        background-image: url("/gradients/Gr-red.png");
+    }
+
+    #rt-3 {
+        background-image: url("/gradients/Gr-green.png");
+    }
+
+    #rt-4 {
+        background-image: url("/gradients/Gr-pink.png");
+    }
+
     article {
         display: flex;
         flex-direction: column;
         gap: .5em;
+        z-index: 2;
     }
 
     article div {
@@ -253,16 +274,13 @@
         }
 
         #rt-1, #rt-2, #rt-3, #rt-4 {
-        align-items: stretch;
-        justify-content: space-around;
-        width: 80em;
+            align-items: stretch;
+            justify-content: space-around;
+            width: 80em;
         }
 
         h1 {
             transform: translateX(-430px);
         }
      }
-
-
-
 </style>
