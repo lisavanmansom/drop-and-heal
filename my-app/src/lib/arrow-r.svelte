@@ -8,7 +8,6 @@
 
     
 <style>
-    svg {width: 13em; height: 13em;}
 
     .arrow-container {
         display: flex;
@@ -31,5 +30,7 @@
         background-color: rgba(245, 245, 245, 0.1);
         transform: scale(1.1);
     }
+  
+    svg {width: 1.5em; height: 1.5em;}
 
 </style>
