@@ -6,6 +6,7 @@
     import BlurgradPink from '$lib/blurgrad-pink.svelte';
     import ArrowL from '$lib/arrow-l.svelte';
     import ArrowR from '$lib/arrow-r.svelte';
+    import { goto } from '$app/navigation';
 
     let currentSection = 1;
 
@@ -14,6 +15,11 @@
             currentSection = section;
         }
     }
+
+    function goToIntroductionTask() {
+        goto('/introduction-task');
+    }
+
 </script>
 
 <main>
@@ -73,7 +79,7 @@
         <BlurgradPink />
         <div class="nav-buttons">
             <button on:click={() => goToSection(4)}><ArrowL /></button>
-            <button disabled><ArrowR /></button>
+            <button on:click={goToIntroductionTask}><ArrowR /></button>
         </div>
     </section>
 
