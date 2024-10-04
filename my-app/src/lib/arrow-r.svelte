@@ -3,5 +3,5 @@
     </svg>
     
 <style>
-    svg {width: 13em; height: 13em;}
+    svg {width: 1.5em; height: 1.5em;}
 </style>
