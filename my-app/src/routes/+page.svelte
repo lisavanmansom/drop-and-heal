@@ -7,10 +7,8 @@
     import ArrowL from '$lib/arrow-l.svelte';
     import ArrowR from '$lib/arrow-r.svelte';
 
-    // Current active section
     let currentSection = 1;
 
-    // Functions to navigate sections
     function goToSection(section) {
         if (section > 0 && section <= 5) {
             currentSection = section;
@@ -19,7 +17,6 @@
 </script>
 
 <main>
-    <!-- Section 1 -->
     <section class:active={currentSection === 1}>
         <header>
             <h2>Drop & Heal</h2>
@@ -30,7 +27,6 @@
         <button class="start-button" on:click={() => goToSection(2)}>Starten</button>
     </section>
 
-    <!-- Section 2 -->
     <section class:active={currentSection === 2}>
         <header>
             <p>Drop & Heal is een metafoor voor het loslaten van de zware last van verdriet en het starten van een helend proces. Als een druppel in het water valt, wordt het onderdeel van een groter, krachtiger geheel, dit gebeurt ook wanneer we ons verdriet delen. 'Drop' verwijst naar het moment waarop je je verdriet of emoties deelt, laat vallen, of erkent. 'Heal' staat voor het genezingsproces dat volgt, waarbij je op je eigen tempo de stappen zet naar herstel en acceptatie. Het is een uitnodiging om je verdriet te erkennen, het los te laten en jezelf toe te staan te helen, stap voor stap, druppel voor druppel.</p>
@@ -42,7 +38,6 @@
         </div>
     </section>
 
-    <!-- Section 3 -->
     <section class:active={currentSection === 3}>
         <header>
             <h2>Introductie algemeen</h2>
@@ -56,7 +51,6 @@
         </div>
     </section>
 
-    <!-- Section 4 -->
     <section class:active={currentSection === 4}>
         <header>
             <h2>Introductie algemeen</h2>
@@ -70,7 +64,6 @@
         </div>
     </section>
 
-    <!-- Section 5 -->
     <section class:active={currentSection === 5}>
         <header>
             <h2>Introductie algemeen</h2>
