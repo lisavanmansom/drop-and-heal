@@ -7,14 +7,21 @@
 
 <main class="intro-main">
     <article class="intro-article">
-        <h3>Introductie algemeen</h3>
-        <h2>Rouwtaken</h2>
-        <p>
-            Onze methode is gebaseerd op de erkende rouwtaken van William Worden, Amerikaans rouwexpert, 
-            zorgvuldig samengesteld om jou te ondersteunen tijdens je rouwreis. Ontdek met ons de betekenis en steun die het jou kan bieden.
-        </p>
+        <header>
+            <h3>Introductie <br> algemeen</h3>
+        </header>
+        <section class="content">
+            <h2>Rouwtaken</h2>
+            <p>
+                Onze methode is gebaseerd op de erkende rouwtaken van William Worden, Amerikaans rouwexpert, 
+                zorgvuldig samengesteld om jou te ondersteunen tijdens je rouwreis. <br><br>
+                Ontdek met ons de betekenis en steun die het jou kan bieden.
+            </p>
+        </section>
     </article>
+
     <BlurgradPink />
+
     <div class="nav-buttons">
         <button on:click={() => goto('/tools')}>
             <ArrowL />
@@ -46,20 +53,46 @@
     }
 
     .intro-main {
-        overflow: hidden;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         color: white;
         background-color: black;
-        padding: 2em 0;
         width: 100%;
         height: 100vh;
+        overflow: hidden;
+        position: relative;
+        padding: 2rem 2rem;
     }
 
     .intro-article {
-        padding: 0rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    header {
+        text-align: left;
+        align-self: flex-start;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20rem;
+    }
+
+    .content h2 {
+        margin-bottom: 1rem;
+        font-size: 2.5em;
     }
     
     .nav-buttons {
