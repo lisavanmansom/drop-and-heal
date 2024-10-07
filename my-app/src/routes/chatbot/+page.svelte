@@ -20,7 +20,7 @@
     </ul>
     
   <footer>
-    <form action="" method="post">
+    <form method="POST">
         <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
         <button on:click={sendMessage}>Verstuur</button>
     </form>
