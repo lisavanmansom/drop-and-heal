@@ -20,21 +20,13 @@
     </ul>
     
   <footer>
-    <form action="" method="post">
+    <form method="post">
         <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
         <button on:click={sendMessage}>Verstuur</button>
     </form>
   </footer>
 
   </section>
-
- 
-
-              
-
-  
-
-
 </main>
   
 <style>
@@ -59,7 +51,6 @@ main {
   height: 100%;
     }
 
-    
 .chatroom {
   display: flex;
   flex-direction: column;
@@ -73,12 +64,6 @@ main {
   background-color: #111111;
   color: #d9d9d9;
     }
-
-.chatroom footer {
-  margin-top: auto;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-}
 
 h1 {
   color: #efefef;
@@ -101,9 +86,7 @@ ul li {
   font-family: Figtree;
     }
 
-
-
-button {
+  button {
   padding: .8em;
   border-radius: 50px;
   background-color: teal;
@@ -125,6 +108,14 @@ input[type=text]:focus-visible {
   outline: 2px solid teal;
   border-radius: 3px;
 }
+
+.chatroom footer {
+  margin-top: auto;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+
 
     /* Desktop styles */
 @media only screen and (min-width: 1025px) {
