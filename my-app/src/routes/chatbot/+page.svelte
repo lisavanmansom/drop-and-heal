@@ -1,4 +1,6 @@
 <script>
+    import { enhance } from '$app/forms';
+
     let messages = [];
     let newMessage = '';
   
@@ -6,6 +8,8 @@
       messages = [...messages, { text: newMessage, timestamp: new Date().getTime() }];
       newMessage = '';
     }
+
+    console.log(messages, newMessage);
   </script>
 
   <main>
@@ -20,7 +24,7 @@
     </ul>
     
   <footer>
-    <form method="POST">
+    <form method="POST" use:enhance>
         <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
         <button on:click={sendMessage}>Verstuur</button>
     </form>
