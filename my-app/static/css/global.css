@@ -12,6 +12,11 @@
     --progress-bg: #595959;
   }
 
+  html, body {
+    background-color: var(--b);
+    color: white; /* Optioneel: tekst ook wit */
+  }
+
   @font-face {
     font-family: Calvino;
     src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
@@ -38,5 +43,6 @@
     box-sizing: border-box;
     scrollbar-width: none;
   }
+
 
 *::-webkit-scrollbar {display: none;}
