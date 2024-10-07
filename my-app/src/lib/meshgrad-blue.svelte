@@ -2,7 +2,7 @@
 
 <style>
     img {
-        animation: aBlue 10s linear infinite;
+        animation: aBlue 20s linear infinite;
         height: 15em;
         margin: 3em 0 1em 0;
         order: -1;
