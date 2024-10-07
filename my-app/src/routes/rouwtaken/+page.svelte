@@ -95,7 +95,8 @@
         font-size: 2.5em;
     }
     
-    .nav-buttons {
+
+    .intro-main .nav-buttons {
         position: absolute;
         bottom: 35px;
         display: flex;
@@ -104,15 +105,26 @@
         max-width: 7rem;
     }
 
-    .intro-main button {
+    .nav-buttons button {
         background: none;
-        border: none;
+        border: 2px solid rgba(215, 122, 255, 0.8);
+        border-radius: 50%;
+        width: 50px; 
+        height: 50px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
-        color: rgb(255, 255, 255);
-        font-size: 2em;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
 
-    .intro-main button:disabled {
+    .nav-buttons button:hover {
+        background-color: rgba(255, 255, 255, 0.1); 
+        border-color: rgba(255, 255, 255, 1); 
+        color: rgba(255, 255, 255, 1); 
+    }
+
+    .nav-buttons button:disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
