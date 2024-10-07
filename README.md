@@ -1,7 +1,15 @@
 # Drop and Heal
 Rouw is een diep persoonlijke en vaak complexe ervaring die varieert van persoon tot persoon. Het rouwproces kent geen vast tijdspad of gestandaardiseerde aanpak en de intensiteit en duur van het rouwproces kunnen sterk verschillen. In onze hedendaagse samenleving krijgen veel jongvolwassenen te maken met rouw, maar vaak ontbreekt het aan toegankelijke en begrijpelijke ondersteuning die aansluit bij hun specifieke levensfase en persoonlijke behoeften. Drop & Heal streeft ernaar deze leemte te vullen met een innovatieve benadering die technologie gebruikt om een gepersonaliseerd ondersteuningsprogramma te bieden dat zich aanpast aan de unieke behoeften van elke gebruiker. Door gebruik te maken van een analyse, kan de app de specifieke rouwtaak waarin de gebruiker zich bevindt vast stellen en de gewenste hulp bieden.
 
-## Design challenge
+## Inhoudsopgave
+  * [Beschrijving](#beschrijving)
+  * [Kenmerken](#kenmerken)
+  * [Installatie](#installatie)
+  * [Gebruik](#gebruik)
+  * [Bronnen](#bronnen)
+  * [Licentie](#licentie)
+
+## Beschrijving
 Ontwerp een webapp voor Drop & Heal waarbij een gebruiksvriendelijke, responsieve en empathisch vormgegeven front-end centraal staat. Het moet intuïtief en toegankelijk zijn voor jongvolwassenen die zich in verschillende stadia van rouw bevinden. De interface moet naadloos aansluiten bij de emotionele en functionele behoeften van de gebruikers tijdens hun persoonlijke rouwproces.
 
 ## Features
