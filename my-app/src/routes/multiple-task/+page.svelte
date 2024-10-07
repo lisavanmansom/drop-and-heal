@@ -2,7 +2,7 @@
   // export let csr = true;
 </script>
 
-<div class="header">
+<header>
   <div class="title">
     <div class="title-row">
       <h1>De pijn doorvoelen</h1>
@@ -12,71 +12,98 @@
     </div>
     <progress value="25" max="100"></progress>
   </div>
-</div>
-<div class="main-page">
+</header>
+
+<main>
   <div class="images">
-    <img id="image1" src="/icon/mesh-grad.png" alt="" />
-    <img src="/icon/rouwtaak1.png" alt="" />
-    <img id="image3" src="/icon/mesh-grad.png" alt="" />
+    <img loading="lazy" id="image1" src="/icon/mesh-grad.png" alt="" />
+    <img loading="lazy" src="/icon/rouwtaak1.png" alt="" />
+    <img loading="lazy" id="image3" src="/icon/mesh-grad.png" alt="" />
   </div>
   <h2>Rouwstappen van de dag</h2>
   <h4>1 oefening open vandaag</h4>
-</div>
+</main>
 
-<div class="exercises">
-  <div class="card">
-    <div class="card-image">
-      <img src="/icon/storm.png" alt="" />
-    </div>
+<section class="exercises">
+
+  <article class="card">
+      <img class="card-image" src="/icon/storm.png" alt="" />
     <div class="exercise-info">
       <div class="startbutton">
-        <a href="#"><h3>Start oefening</h3></a>
+        <a href="#">Start oefening</a>
       </div>
       <div class="exercise-text">
         <p>Oefening</p>
-        <h2>Emoties herkennen</h2>
+        <h3>Emoties herkennen</h3>
         <div class="exercise-subinfo">
           <a class="communitydrop" href="#">
             <div class="community-images">
-              <img class="community-image" src="/icon/community1.png" alt="" />
-              <img class="community-image" src="/icon/community2.png" alt="" />
-              <img class="community-image" src="/icon/community3.png" alt="" />
+              <img
+                class="community-image"
+                loading="lazy"
+                src="/icon/community1.png"
+                alt=""
+              />
+              <img
+                class="community-image"
+                loading="lazy"
+                src="/icon/community2.png"
+                alt=""
+              />
+              <img
+                class="community-image"
+                loading="lazy"
+                src="/icon/community3.png"
+                alt=""
+              />
             </div>
             <p>47 community drops</p></a
           >
         </div>
       </div>
     </div>
-  </div>
+  </article>
 
-  <div class="card">
-    <div class="card-image">
-      <img src="/icon/storm.png" alt="" />
+  <article class="card">
+    <img class="card-image" src="/icon/storm.png" alt="" />
+  <div class="exercise-info">
+    <div class="startbutton">
+      <a href="#">Start oefening</a>
     </div>
-    <div class="exercise-info">
-      <div class="startbutton">
-        <a href="#"><h3>Start oefening</h3></a>
-      </div>
-      <div class="exercise-text">
-        <p>Oefening</p>
-        <h2>Emoties herkennen</h2>
-        <div class="exercise-subinfo">
-          <a class="communitydrop" href="#">
-            <div class="community-images">
-              <img class="community-image" src="/icon/community1.png" alt="" />
-              <img class="community-image" src="/icon/community2.png" alt="" />
-              <img class="community-image" src="/icon/community3.png" alt="" />
-            </div>
-            <p>47 community drops</p>
-          </a>
-        </div>
+    <div class="exercise-text">
+      <p>Oefening</p>
+      <h2>Emoties herkennen</h2>
+      <div class="exercise-subinfo">
+        <a class="communitydrop" href="#">
+          <div class="community-images">
+            <img
+              class="community-image"
+              loading="lazy"
+              src="/icon/community1.png"
+              alt=""
+            />
+            <img
+              class="community-image"
+              loading="lazy"
+              src="/icon/community2.png"
+              alt=""
+            />
+            <img
+              class="community-image"
+              loading="lazy"
+              src="/icon/community3.png"
+              alt=""
+            />
+          </div>
+          <p>47 community drops</p></a
+        >
       </div>
     </div>
   </div>
-</div>
+</article>
+</section>
 
-<!-- Sticky Footer -->
-<footer class="footer">
+<footer>
   <div class="item">
     <img src="/icon/square.png" alt="" />
     <h5>Vandaag</h5>
@@ -124,7 +151,7 @@
     background-color: var(--b);
   }
 
-  .header {
+  header {
     background-color: var(--b);
     padding-top: 1em;
     width: 100%;
@@ -165,7 +192,7 @@
     background-color: var(--rt-2);
   }
 
-  .main-page {
+  main {
     position: relative;
     background-color: var(--b);
     color: white;
@@ -175,6 +202,19 @@
     flex-grow: 1;
     overflow: hidden;
     padding-bottom: 2em;
+  }
+
+  main h2 {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+  }
+
+  main h4 {
+    color: grey;
+  }
+
+  main img {
+    width: 200px;
   }
 
   #image1 {
@@ -189,19 +229,6 @@
     top: -65%;
     left: 40%;
     width: 800px;
-  }
-
-  .main-page h2 {
-    margin-top: 1em;
-    margin-bottom: 0.3em;
-  }
-
-  .main-page h4 {
-    color: grey;
-  }
-
-  .main-page img {
-    width: 200px;
   }
 
   .exercises {
@@ -225,12 +252,9 @@
   .card-image {
     display: flex;
     justify-content: center;
-  }
-
-  .card-image img {
-    margin-top: 1em;
+    width: -webkit-fill-available;
     border-radius: 20px 20px 0 0;
-    width: 400px;
+    margin-top: 1em;
   }
 
   .exercise-info {
@@ -287,7 +311,7 @@
     margin-top: 1em;
   }
 
-  .footer {
+  footer {
     display: flex;
     justify-content: space-between;
     background-color: var(--b);
