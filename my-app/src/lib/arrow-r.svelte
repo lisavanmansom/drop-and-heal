@@ -1,0 +1,36 @@
+<div class="arrow-container">
+    <div class="arrow-button">
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.4381 4.55426C15.6843 4.79623 15.6877 5.19194 15.4457 5.43812L11.5027 9.44973C11.2607 9.6959 10.865 9.69931 10.6188 9.45735C10.3727 9.21539 10.3693 8.81967 10.6112 8.5735L14.1161 5.00762L10.5503 1.50269C10.3041 1.26073 10.3007 0.865016 10.5426 0.618844C10.7846 0.372671 11.1803 0.36926 11.4265 0.611224L15.4381 4.55426ZM0.924462 5.74636C0.579297 5.74934 0.297073 5.47194 0.294098 5.12678C0.291122 4.78161 0.568522 4.49939 0.913687 4.49641L0.924462 5.74636ZM15.0054 5.62498L0.924462 5.74636L0.913687 4.49641L14.9946 4.37502L15.0054 5.62498Z" fill="#F5F5F5"/>
+        </svg>
+    </div>
+</div>
+
+    
+<style>
+
+    .arrow-container {
+        display: flex;
+    }
+
+    .arrow-button {
+        padding: 15px;
+        width: 1.5em;
+        height: 1.5em;
+        border: 1px solid #F5F5F5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .arrow-button:hover {
+        background-color: rgba(245, 245, 245, 0.1);
+        transform: scale(1.1);
+    }
+  
+    svg {width: 1.5em; height: 1.5em;}
+
+</style>
