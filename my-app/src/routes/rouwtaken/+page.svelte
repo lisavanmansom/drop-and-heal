@@ -26,7 +26,7 @@
         <button on:click={() => goto('/tools')}>
             <ArrowL />
         </button>
-        <button on:click={() => goto('/introduction-task')}>
+        <button on:click={() => goto('/introduction-task-1')}>
             <ArrowR />
         </button>
     </div>
