@@ -1,22 +1,27 @@
 <script>
-    import MeshBlue from '$lib/meshgrad-blue-static.svelte';
+    import BlurgradRed from '$lib/blurgrad-red.svelte';
+    import ArrowL from '$lib/arrow-l.svelte';
+    import ArrowR from '$lib/arrow-r.svelte';
     import { goto } from '$app/navigation';
 </script>
 
-
 <main class="intro-main">
-    <MeshBlue />
     <article class="intro-article">
-        <h1>Drop <br> & Heal</h1>
-        <p>
-            Welkom bij Drop & Heal. Een veilige plek voor jouw reis door rouwverwerking.<br><br>
-            Er volgt eerst een introductie en kennismaking, hierna kan je op eigen tempo aan de slag in de omgeving.
-        </p>
+        <h3>Introductie algemeen</h3>
+        <h2>Privacy</h2>
+        <p>Jouw privacy en comfort zijn onze prioriteit. Alles wat je deelt blijft vertrouwelijk.</p>    
     </article>
-    <button class="start-button" on:click={() => goto('/uitleg-metafoor')}>
-        Starten
-    </button>
+    <BlurgradRed />
+    <div class="nav-buttons">
+        <button on:click={() => goto('/uitleg-metafoor')}>
+            <ArrowL />
+        </button>
+        <button on:click={() => goto('/tools')}>
+            <ArrowR />
+        </button>
+    </div>
 </main>
+
 
 <style>
 
@@ -51,54 +56,31 @@
         height: 100vh;
     }
 
-    .intro-main h1 {
-        font-family: Calvino-Grande;
-        font-size: 75px;
-        line-height: 4.5rem;
-        margin-bottom: 2rem;
-    }
-
     .intro-article {
-        padding: 11rem 2rem 3rem 2rem;
-        z-index: 100;
+        padding: 0rem 2rem;
     }
     
-    .intro-article p {
-        padding-right: 3rem;
-    }
-
-    .start-button {
+    .nav-buttons {
         position: absolute;
         bottom: 35px;
-        z-index: 2000;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 7rem;
     }
 
-    .intro-main .start-button {
-        background: none;
-        border: 1px solid #F5F5F5;
-        color: white;
-        padding: 10px 20px;
-        font-size: 1em;
-        cursor: pointer;
-        border-radius: 25px;
-        margin-top: 1rem;
-        transition: background-color 0.3s;
-    }
-
-    .intro-main button:hover {
-        background-color: rgba(245, 245, 245, 0.1);
-    }
-
-    .intro-main button {
+    .nav-buttons button {
         background: none;
         border: none;
         cursor: pointer;
-        color: white;
+        color: rgba(255, 255, 255, 0.232);
+        filter: saturate(50%);
         font-size: 2em;
     }
 
-    .intro-main button:disabled {
+    .nav-buttons button:disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
+
 </style>

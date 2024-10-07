@@ -1,21 +1,33 @@
 <script>
     import MeshBlue from '$lib/meshgrad-blue-static.svelte';
+    import BlurgradBlue from '$lib/blurgrad-blue.svelte';
+    import ArrowL from '$lib/arrow-l.svelte';
+    import ArrowR from '$lib/arrow-r.svelte';
     import { goto } from '$app/navigation';
 </script>
 
-
 <main class="intro-main">
-    <MeshBlue />
+    <div class="background-image">
+        <MeshBlue />
+    </div>
     <article class="intro-article">
-        <h1>Drop <br> & Heal</h1>
         <p>
-            Welkom bij Drop & Heal. Een veilige plek voor jouw reis door rouwverwerking.<br><br>
-            Er volgt eerst een introductie en kennismaking, hierna kan je op eigen tempo aan de slag in de omgeving.
+            Drop & Heal is een metafoor voor het loslaten van de zware last van verdriet en het starten van een helend proces. 
+            Als een druppel in het water valt, wordt het onderdeel van een groter, krachtiger geheel, dit gebeurt ook wanneer we ons verdriet delen.<br><br> 
+            'Drop' verwijst naar het moment waarop je je verdriet of emoties deelt, laat vallen, of erkent.<br><br>
+            'Heal' staat voor het genezingsproces dat volgt, waarbij je op je eigen tempo de stappen zet naar herstel en acceptatie. 
+            Het is een uitnodiging om je verdriet te erkennen, het los te laten en jezelf toe te staan te helen, stap voor stap, druppel voor druppel.
         </p>
     </article>
-    <button class="start-button" on:click={() => goto('/uitleg-metafoor')}>
-        Starten
-    </button>
+    <BlurgradBlue />
+    <div class="nav-buttons">
+        <button on:click={() => goto('/')}>
+            <ArrowL />
+        </button>
+        <button on:click={() => goto('/privacy')}>
+            <ArrowR />
+        </button>
+    </div>
 </main>
 
 <style>
@@ -47,53 +59,34 @@
         align-items: center;
         color: white;
         background-color: black;
+        padding: 2em 0;
         width: 100%;
         height: 100vh;
     }
 
-    .intro-main h1 {
-        font-family: Calvino-Grande;
-        font-size: 75px;
-        line-height: 4.5rem;
-        margin-bottom: 2rem;
-    }
-
     .intro-article {
-        padding: 11rem 2rem 3rem 2rem;
+        padding: 0 3rem;
         z-index: 100;
     }
-    
-    .intro-article p {
-        padding-right: 3rem;
-    }
 
-    .start-button {
+    .background-image {
+        opacity: 40%;
+    }
+    
+    .nav-buttons {
         position: absolute;
         bottom: 35px;
-        z-index: 2000;
-    }
-
-    .intro-main .start-button {
-        background: none;
-        border: 1px solid #F5F5F5;
-        color: white;
-        padding: 10px 20px;
-        font-size: 1em;
-        cursor: pointer;
-        border-radius: 25px;
-        margin-top: 1rem;
-        transition: background-color 0.3s;
-    }
-
-    .intro-main button:hover {
-        background-color: rgba(245, 245, 245, 0.1);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 7rem;
     }
 
     .intro-main button {
         background: none;
         border: none;
         cursor: pointer;
-        color: white;
+        color: rgb(255, 255, 255);
         font-size: 2em;
     }
 
@@ -102,3 +95,6 @@
         cursor: not-allowed;
     }
 </style>
+
+
+
