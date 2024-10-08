@@ -25,7 +25,7 @@
             <p>{d4}</p>
             <div class="d-a">
                 <a href="./introduction-task-3"><ArrowL /></a>
-                <a href="./introduction-task-2"><ArrowR /></a>
+                <a href="./introduction-h-1"><ArrowR /></a>
             </div>
         </article>
         

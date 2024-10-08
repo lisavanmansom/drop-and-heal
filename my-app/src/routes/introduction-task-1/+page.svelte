@@ -16,11 +16,15 @@
 </script>
 
 <main>
-    <h1>Introductie rouwtaken</h1>
+    <header>
+        <h1>Introductie rouwtaken</h1>
+        <!-- <div><a href="./introduction-task-4">skip</a></div>-->
+    </header>
+    
 
       <section id="rt-1">
             <article>
-                <h2>{rt}<em>1</em></h2>
+                <h2>{rt}</h2>
                 <h3>{sub1}</h3>
                 <p>{d1}</p> 
 
@@ -42,7 +46,6 @@
     h2      { font-weight: 100; font-size: 1.6em;}
     h3      { font-weight: 100; text-wrap: nowrap; font-size: 1.3em;}
 
-    em      { font-family: dm-serif; font-size: 1em; font-style: normal; margin: 0 .25em;}
     p       { color: var(--g); font-weight: 100; font-size: 1.2em;}
 
     main {
@@ -56,6 +59,15 @@
         min-height: 100dvh;
         width: 100%;
         text-align: left;
+    }
+
+    header { 
+        align-items: start;
+        justify-content: baseline;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: .5em;
+        z-index: 10;
     }
 
     /* sections w. griefing-tasks */
@@ -153,7 +165,6 @@
         h2      { font-size: 2.2em; }
         h3      { font-size: 1.7em; }
 
-        em      { font-size: 1em; }
         p       { font-size: 1.4em; max-width: 22em; }
 
         #rt-1 { padding: 7em 2em 0em 2em; }

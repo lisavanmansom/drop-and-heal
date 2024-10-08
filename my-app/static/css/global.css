@@ -30,6 +30,12 @@
     font-weight: 100;
   }
 
+  @font-face {
+    font-family: Heroic;
+    src: url(../font/heroic/heroic-brutal.otf);
+    font-weight: 100;
+  }
+
 * {
     font-family: Figtree;
     scroll-behavior: smooth;
