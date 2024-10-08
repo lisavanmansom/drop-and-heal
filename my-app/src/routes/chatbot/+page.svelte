@@ -137,12 +137,12 @@ input[type=text]:focus-visible {
   }
 
   input[type=text] {
-    width: 100%;
+    width: 75%;
     margin-bottom: .8em;
   }
 
   button {
-    width: 100%;
+    width: 20%;
   }
 
   button:focus-visible {
