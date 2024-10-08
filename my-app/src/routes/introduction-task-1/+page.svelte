@@ -8,12 +8,17 @@
   }
 
   import {MeshgradBlue, ArrowR} from '$lib'
+  import ViewTransition from '../navigation.svelte'
 
   let rt = "Rouwtaak"
   let sub1 = "Het verlies aanvaarden"
   let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen."
   
 </script>
+
+<div class="app">
+    <ViewTransition />
+  </div>
 
 <main>
     <header>

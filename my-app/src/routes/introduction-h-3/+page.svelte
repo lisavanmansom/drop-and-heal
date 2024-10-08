@@ -8,12 +8,17 @@
     }
   
     import {ArrowR} from '$lib'
+    import ViewTransition from '../navigation.svelte'
   
     let title = "Hulp op maat, of liever zelf kiezen?"
     let sub = "Jouw keuze"
     let des = "Als Yana iets vraagt wat je liever niet beantwoordt, is dat helemaal oké. Je kunt vragen overslaan wanneer jij dat wilt, je hoeft dit alleen maar aan te geven. Liever zelf kiezen waar je start? Dat is ook mogelijk. Kies hieronder dan voor je eigen pad. Je kan op elk moment schakelen tussen de verschillende rouwtaken. Jouw reis, jouw tempo."
     
   </script>
+
+<div class="app">
+  <ViewTransition />
+</div>
   
   <main>
     <header>

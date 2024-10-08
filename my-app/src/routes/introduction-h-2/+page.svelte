@@ -2,18 +2,18 @@
     export let task;
     console.log('Task:', task);
   
-    function stripHtml(html) {
-      return html.replace(/<\/?[^>]+(>|$)/g, "");
-      // Verwijderd HTML tags die meegegeven zijn vanuit directus
-    }
-  
     import {ArrowR, ArrowL} from '$lib'
+    import ViewTransition from '../navigation.svelte'
   
     let title = "Hulp op maat, of liever zelf kiezen?"
     let sub = "Ontmoet Yana"
     let des = "Maak kennis met Yana, jouw persoonlijke digitale hulp. Yana is getraind met informatie uit een breed scala literatuur over rouw. Yana kan je voorzien van een programma dat bij jou aansluit. "
     
   </script>
+
+  <div class="app">
+    <ViewTransition />
+  </div>
   
   <main>
     <header>

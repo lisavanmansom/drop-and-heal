@@ -2,18 +2,17 @@
     export let task;
     console.log('Task:', task);
   
-    function stripHtml(html) {
-      return html.replace(/<\/?[^>]+(>|$)/g, "");
-      // Verwijderd HTML tags die meegegeven zijn vanuit directus
-    }
-  
     import {ArrowR} from '$lib'
+    import ViewTransition from '../navigation.svelte'
   
     let title = "Hulp op maat, of liever zelf kiezen?"
     let sub = "Persoonlijke reis"
     let des = "Nu je meer weet over de rouwtaken zelf, is het tijd om jouw persoonlijke reis te samen te stellen. Rouw is een uniek proces en niet lineair, daarom bieden we ondersteuning om je verder te helpen."
-    
   </script>
+
+  <div class="app">
+    <ViewTransition />
+  </div>
   
   <main>
     <header>
