@@ -2,7 +2,7 @@
     export let task;
     console.log('Task:', task);
   
-    import {ArrowR} from '$lib'
+    import {ArrowR, ArrowL} from '$lib'
     import ViewTransition from '../navigation.svelte'
   
     let title = "Hulp op maat, of liever zelf kiezen?"
@@ -28,6 +28,7 @@
             <h2>{sub}</h2>
             <p>{des}</p> 
                 <div class="d-a">
+                  <a href="./introduction-task-4"><ArrowL /></a>
                     <a href="./introduction-h-2"><ArrowR /></a>
                 </div>
         </article>
@@ -86,7 +87,7 @@
         padding: 4em 2em 6em 2em;
         min-height: 100vh;
         position: relative;
-        position: absolute;
+        /* position: absolute; */
         transition: opacity 1s ease, visibility 0.5s ease;
         width: 100%;
       }

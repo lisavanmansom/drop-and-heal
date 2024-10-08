@@ -23,7 +23,7 @@
 <main>
     <header>
         <h1>Introductie rouwtaken</h1>
-        <!-- <div><a href="./introduction-task-4">skip</a></div>-->
+        <a href="./introduction-h-1">skip</a>
     </header>
     
 
@@ -47,7 +47,7 @@
 
 <style>
     h1, h2  { font-family: Calvino; }
-    h1      { font-size: 2em; font-weight: 600; z-index:2; max-width: 8em; padding: 0 0 0 1em;}
+    h1      { font-size: 2em; font-weight: 600; z-index:2; max-width: 8em;}
     h2      { font-weight: 100; font-size: 1.6em;}
     h3      { font-weight: 100; text-wrap: nowrap; font-size: 1.3em;}
 
@@ -55,6 +55,10 @@
 
     main {
         background-color: var(--b);
+        background-image: url("/gradients/Gr-blue.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         color: var(--w);
         display: flex;
         flex-direction: column;
@@ -68,28 +72,34 @@
 
     header { 
         align-items: start;
-        justify-content: baseline;
         display: flex;
         flex-direction: column-reverse;
-        padding: .5em;
+        height: 10em;
         z-index: 10;
+        justify-content: space-between;
+        padding: 0 0 0 1em;
     }
+
+    header a {
+        border: .1em solid var(--rt-1);
+        border-radius: .5em;
+        color: var(--w);
+        font-size: 1em;
+        padding: .3em .6em;
+        text-decoration: none;
+        width: max-content;
+      }
 
     /* sections w. griefing-tasks */
     #rt-1 {
         align-items: stretch;
-        background-color: var(--b);
-        background-image: url("/gradients/Gr-blue.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 4em 2em 2em 2em;
-        position: relative;
-        position: absolute;
+        padding: 12em 2em 2em 1em;
         min-height: 100vh;
+        position: relative;
+        /* position: absolute; */
         transition: opacity 1s ease, visibility 0.5s ease;
         width: 100%;
     }
@@ -140,10 +150,11 @@
 
 
      @media (min-width:575px) {
-        h1      { padding: .75em 0 0 1.5em; }
         p       { max-width: 20em; }
 
-        #rt-1 { padding: 5.5em 4em 3em 3em; }
+       header { padding: 0 0 0 3em; justify-content: space-around;}
+
+        #rt-1 { padding: 8.5em 4em 3em 3em; }
 
         article {
             align-items: end;
@@ -172,14 +183,16 @@
 
         p       { font-size: 1.4em; max-width: 22em; }
 
-        #rt-1 { padding: 7em 2em 0em 2em; }
+        header { padding: 0 0 0 3.7em;}
+
+        #rt-1 { padding: 8em 2em 2em 1.8em; }
 
         progress { margin: 2em 2em; }
      }
 
 
 @media (min-width:1175px) {
-        #rt-1 { padding: 7.5em 4em 3em 4em; }
+        #rt-1 { padding: 10em 4em 3em 15.5em; }
 
         progress { margin: 2em 0em; }
      }
@@ -188,12 +201,12 @@
 
         main { place-items: center; }
 
+        header {padding: 0 25em 0 0em;}
+
         #rt-1 {
             align-items: stretch;
             justify-content: space-around;
             width: 80em;
         }
-
-        h1 { transform: translateX(-430px); }
      }
 </style>

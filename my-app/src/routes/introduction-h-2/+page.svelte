@@ -88,7 +88,7 @@
         padding: 4em 2em 6em 2em;
         min-height: 100vh;
         position: relative;
-        position: absolute;
+        /* position: absolute; */
         transition: opacity 1s ease, visibility 0.5s ease;
         width: 100%;
       }
