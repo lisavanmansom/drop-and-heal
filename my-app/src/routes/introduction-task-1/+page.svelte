@@ -96,7 +96,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 12em 2em 2em 1em;
+        padding: 1em 2em 2em 1em;
         min-height: 100vh;
         position: relative;
         /* position: absolute; */
@@ -154,7 +154,7 @@
 
        header { padding: 0 0 0 3em; justify-content: space-around;}
 
-        #rt-1 { padding: 8.5em 4em 3em 3em; }
+        #rt-1 { padding: .5em 4em 3em 3em; }
 
         article {
             align-items: end;
@@ -185,14 +185,14 @@
 
         header { padding: 0 0 0 3.7em;}
 
-        #rt-1 { padding: 8em 2em 2em 1.8em; }
+        #rt-1 { padding: 0em 2em 2em 1.8em; }
 
         progress { margin: 2em 2em; }
      }
 
 
 @media (min-width:1175px) {
-        #rt-1 { padding: 10em 4em 3em 15.5em; }
+        #rt-1 { padding: 0em 4em 3em 3.5em; }
 
         progress { margin: 2em 0em; }
      }
@@ -206,7 +206,7 @@
         #rt-1 {
             align-items: stretch;
             justify-content: space-around;
-            width: 80em;
+            width: 56em;
         }
      }
 </style>
