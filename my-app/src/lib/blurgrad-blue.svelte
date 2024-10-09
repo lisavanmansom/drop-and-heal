@@ -4,11 +4,14 @@
 <style>
     .blurred-image {
         position: absolute;
-        width: 607px;
-        height: 607px;
-        filter: blur(300px) brightness(1.4);
+        background-color: rgb(107, 139, 255);
+        width: 300px;
+        height: 300px;
+        filter: blur(100px) brightness(1.4);
         opacity: 0.8;
-        z-index: 1;
+        z-index: 0;
+        top: -120px;
+        right: -100px;
     }
 
     .blurred-image::before {
