@@ -8,12 +8,17 @@
   }
 
   import {MeshgradPink, ArrowL, ArrowR} from '$lib'
+  import ViewTransition from '../navigation.svelte'
 
 
   let rt = "Rouwtaak"
   let sub4 = "Emotioneel verder gaan"
   let d4 = "Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven."
 </script>
+
+<div class="app">
+    <ViewTransition />
+  </div>
 
 <main>
     <h1>Introductie rouwtaken</h1>
@@ -25,7 +30,7 @@
             <p>{d4}</p>
             <div class="d-a">
                 <a href="./introduction-task-3"><ArrowL /></a>
-                <a href="./introduction-task-2"><ArrowR /></a>
+                <a href="./introduction-h-1"><ArrowR /></a>
             </div>
         </article>
         

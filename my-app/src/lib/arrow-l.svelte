@@ -7,29 +7,6 @@
 
 <style>
 
-    .arrow-container {
-        display: flex;
-        gap: 1em;
-    }
-
-    .arrow-button {
-        padding: 15px;
-        width: 1.5em;
-        height: 1.5em;
-        border: 1px solid #F5F5F5;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: transform 0.2s, background-color 0.2s;
-    }
-
-    .arrow-button:hover {
-        background-color: rgba(245, 245, 245, 0.1);
-        transform: scale(1.1);
-    }
-
-    svg {width: 1.5em; height: 1.5em;}
+    svg { width: 1.5em; height: 1.5em; }
 
 </style>

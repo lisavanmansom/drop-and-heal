@@ -8,12 +8,17 @@
   }
 
   import {MeshgradRed, ArrowL, ArrowR} from '$lib'
+  import ViewTransition from '../navigation.svelte'
 
   let rt = "Rouwtaak"
   let sub2 = "De pijn doorvoelen"
   let d2 = "Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken."
 
 </script>
+
+<div class="app">
+    <ViewTransition />
+  </div>
 
 <main>
     <h1>Introductie rouwtaken</h1>
