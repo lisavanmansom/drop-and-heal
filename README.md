@@ -16,7 +16,7 @@ Ontwerp een webapp voor Drop & Heal waarbij een gebruiksvriendelijke, responsiev
 
 ## Kenmerken
 
-Voor deze squadpage is er gebruik gemaakt van het framework Sveltekit en wordt de data opgehaald uit Directus. De code strategie die er is gebruikt is PE, met CSS keyframes zijn er een aantal kleine animaties toegevoegd. Verder is mobile first gecodeerd, het kleinste scherm is 300px. In Google Chrome zijn er view-transitions zichtbaar wat zorgt voor een vloeiende overloop tussen de pagina's.
+Voor deze page is er gebruik gemaakt van het framework Sveltekit en wordt de data opgehaald uit Directus. De code strategie die er is gebruikt is PE, met CSS keyframes zijn er een aantal kleine animaties toegevoegd. Verder is mobile first gecodeerd, het kleinste scherm is 300px. In Google Chrome zijn er view-transitions zichtbaar wat zorgt voor een vloeiende overloop tussen de pagina's.
 
 ## Installatie
 
