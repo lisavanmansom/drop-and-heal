@@ -1,42 +1,38 @@
-> [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+# create-svelte
 
-# Drop and Heal / 2
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-![image](https://github.com/user-attachments/assets/7ba3db41-728b-45fb-ac28-e74804fd9b5c)
+## Creating a project
 
-Rouw is een diep persoonlijke en vaak complexe ervaring die varieert van persoon tot persoon. Drop & Heal streeft ernaar om die leemte te vullen met een innovatieve benadering die technologie gebruikt om een gepersonaliseerd ondersteuningsprogramma te bieden dat zich aanpast aan de unieke behoeften van elke gebruiker. 
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Inhoudsopgave
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-## Beschrijving
+## Developing
 
-Bij de webapplicatie van Drop and Heal staat gebruiksvriendelijke, responsieve en empathisch vormgegeven front-end centraal. De interface sluit naadloos aan bij de emotionele behoefte van de gebruiker door de verschillende fase die Drop and Heal aanbied.
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Kenmerken
+```bash
+npm run dev
 
-Voor deze page is er gebruik gemaakt van het framework Sveltekit en wordt de data opgehaald uit Directus. De code strategie die er is gebruikt is PE, met CSS keyframes zijn er een aantal kleine animaties toegevoegd. Verder is mobile first gecodeerd, het kleinste scherm is 300px. In Google Chrome zijn er view-transitions zichtbaar wat zorgt voor een vloeiende overloop tussen de pagina's.
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## Installatie
+## Building
 
-* Installeer NodeJs;
-* Fork/clone deze repository;
-* Open het in een code editor;
-* Ga naar de directory 'my-app' door in de terminal cd my-app te typen;
-* Run de command npm install;
-* Run de command npm run dev;
-* Klik op de localhost link en begin met coden.
+To create a production version of your app:
 
-## Gebruik
+```bash
+npm run build
+```
 
-## Bronnen
+You can preview the production build with `npm run preview`.
 
-## Licentie
-
-This project is licensed under the terms of the [MIT license](./LICENSE).
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
