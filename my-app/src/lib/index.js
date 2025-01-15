@@ -10,3 +10,8 @@ export { default as BlurgradGreen } from './blurgrad-green.svelte'
 export { default as BlurgradPink } from './blurgrad-pink.svelte'
 export { default as ArrowL } from './arrow-l.svelte'
 export { default as ArrowR } from './arrow-r.svelte'
+
+// intro-form components
+export { default as QuestionForm } from './organism/question-form.svelte'
+export { default as QuestionOption } from './atoms/question-option.svelte'
+export { default as QuestionSet } from './molecules/question-set.svelte'

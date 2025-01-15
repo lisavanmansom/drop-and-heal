@@ -1,21 +1,33 @@
+
 :root {
     --w: #FFFF;
     --b: #111;
     --g: #A6A6A6;
-    --rt-1: #64AAC7;
-    --rt-2: #984A4A;
-    --rt-3: #6E9158;
-    --rt-4: #7C6097;
+    --rt-1: #4DB3FF;
+    --rt-2: #FF4D4D;
+    --rt-3: #DDEC22;
+    --rt-4: #B264FF;
 
     --b-2: #B26161;
     --b-4: #9279A9;
     --progress-bg: #595959;
+
+    /* borders */
+    --b-z: #C3C3C3;
+    --b-h: rgba(255, 255, 255, 0.75);
+    --b-f: rgb(236, 113, 222);
   }
 
   @font-face {
     font-family: Calvino;
     src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
     font-weight: 500;
+  }
+
+  @font-face {
+    font-family: Calvino;
+    src: url(../font/calvino-trial/Calvino-Grande-Bold-trial.ttf);
+    font-weight: 900;
   }
 
   @font-face {
@@ -34,8 +46,9 @@
     font-family: Heroic;
     src: url(../font/heroic/heroic-brutal.otf);
     font-weight: 100;
-}
-@font-face {
+  }
+  
+  @font-face {
     font-family: Calvino-Grande;
     src: url(../font/calvino-trial/Calvino-Grande-Bold-trial.ttf);
     font-weight: 800;
@@ -50,9 +63,54 @@
     scrollbar-width: none;
   }
 
+  h1, h2, h3  { font-family: Calvino-Grande;}
+  h1      { font-size: 3em; font-weight: 600; z-index:2; max-width: 8em;}
+  h2      { font-weight: 100; font-size: 48px; margin-bottom: 1rem;}
+  h3      { font-weight: 100; text-wrap: nowrap; font-size: 32px;}
+  h4      { font-family: Figtree; font-size: 20px; margin-bottom: 0.5rem;}
+  em      { font-family: 'Times New Roman', Times, serif; font-weight: 800; font-size: 48px; font-style: normal; margin: 0 .25em;}
+  p       { color: var(--w); font-weight: 100; font-size: 16px; line-height: 1.5rem;}
+
+.intro-main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-block-size: 100dvh;
+  gap: 2rem; 
+  align-items: center;
+  color: white;
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+}
+
+.intro-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0rem;
+  z-index: 100;
+  position: relative;
+}
+
+.intro-buttons {
+  justify-self: center; 
+  z-index: 100;
+}
+
 *::-webkit-scrollbar {display: none;}
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 1s;
+}
+
+@media (min-width: 65rem){
+  .intro-content{
+    padding: 2rem 10rem;
+  }
 }

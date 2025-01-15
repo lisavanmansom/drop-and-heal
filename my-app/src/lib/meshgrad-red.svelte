@@ -2,19 +2,22 @@
 
 <style>
     img {
-        animation: aBlue 13s linear infinite;
-        height: 15em;
-        margin: 3em 0 1em 0;
+        animation: aRed 4s ease-in-out infinite;
+        height: 16em;
         order: -1;
         object-fit: contain;
         width: 100%;
         z-index: 5;
+        padding-bottom: 3rem;
     }
 
-    @keyframes aBlue {
-    25% { transform: scale(1.2); }
-    50% { transform: scale(1.1); }
-    75% { transform: scale(1.2); }
+    @keyframes aRed {
+        0%, 100% {
+            transform: scale(1); 
+        }
+        50% {
+            transform: scale(1.1); 
+        }
     }
 
     @media (min-width:575px) {

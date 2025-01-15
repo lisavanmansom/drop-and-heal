@@ -1,4 +1,8 @@
-<img src="/gradients/Meshgrad-red.png" alt="" width="100" height="100" class="blurred-image"/>
+<script>
+    export let customStyles = {};
+</script>
+
+<img src="/gradients/Meshgrad-red.png" alt="" width="100" height="100" class="blurred-image"  style="{customStyles}"/>
 
  
 <style>

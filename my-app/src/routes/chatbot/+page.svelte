@@ -19,29 +19,15 @@
       {/each}
     </ul>
     
-  <footer>
     <form method="POST">
         <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
         <button on:click={sendMessage}>Verstuur</button>
+        <!-- dit is niet PE vgm-->
     </form>
-  </footer>
-
   </section>
 </main>
   
 <style>
-  @font-face {
-    font-family: Calvino;
-    src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
-    font-weight: 500;
-  }
-
-  @font-face {
-    font-family: Figtree;
-    src: url(../font/figtree/Figtree-Regular.ttf);
-    font-weight: 200;
-  }
-
 main {
   display: flex;
   justify-content: center;
@@ -84,7 +70,7 @@ ul li {
   padding: 20px;
   margin: 2.5em;
   font-family: Figtree;
-    }
+}
 
   button {
   padding: .8em;
@@ -109,29 +95,6 @@ input[type=text]:focus-visible {
   border-radius: 3px;
 }
 
-.chatroom footer {
-  margin-top: auto;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-}
-
-
-
-    /* Desktop styles */
-@media only screen and (min-width: 1025px) {
-.chatroom {
-  width: 100%;
-  margin: 40px auto;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-.chatroom {
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  }
-
   input[type=text] {
     width: 100%;
     margin-bottom: .8em;
@@ -145,36 +108,5 @@ input[type=text]:focus-visible {
     outline: 2px solid red;
     border-radius: 3px;
   }
-}
 
-/* styles here will apply to extra small mobile devices */
-@media only screen and (max-width: 480px) {
-
-
-  .chatroom {
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  }
-
-  input[type=text] {
-    width: 100%;
-    margin-bottom: .8em;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  button:focus-visible {
-    outline: 2px solid red;
-    border-radius: 3px;
-  }
-  
-}
-
-  </style>
+</style>
