@@ -42,8 +42,8 @@
     flex-direction: column;
     gap: 7.5em;
     justify-content: center;
-    min-height: 100vh;
-    overflow-x: hidden;
+    min-height: 100dvh;
+    overflow: hidden;
     padding: 10em 2em 5em;
     position: relative;
     text-align: center;

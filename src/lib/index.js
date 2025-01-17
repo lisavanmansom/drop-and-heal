@@ -1,5 +1,4 @@
 // place files you want to import through the `$lib` alias in this folder.
-
 export { default as MeshgradBlue } from './meshgrad-blue.svelte'
 export { default as MeshgradRed } from './meshgrad-red.svelte'
 export { default as MeshgradGreen } from './meshgrad-green.svelte'
@@ -15,3 +14,5 @@ export { default as ArrowR } from './arrow-r.svelte'
 export { default as QuestionForm } from './organism/question-form.svelte'
 export { default as QuestionOption } from './atoms/question-option.svelte'
 export { default as QuestionSet } from './molecules/question-set.svelte'
+
+export { default as NavIcons } from './atoms/icons-nav.svelte'

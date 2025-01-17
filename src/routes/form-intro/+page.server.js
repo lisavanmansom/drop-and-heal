@@ -11,13 +11,13 @@ export const actions = {
 
     // Via selectedAnswers is the result calculated and redirection
     if (selectedAnswers.question1 === 'f1-i-1' && selectedAnswers.question2 === 'f2-i-1') {
-      throw redirect(303, '/multiple-task-1'); 
+      throw redirect(303, '/form-redirect/rouwtaak1'); 
     } else if (selectedAnswers.question1 === 'f1-i-4' && selectedAnswers.question3 === 'f3-i-3') {
-      throw redirect(303, '/multiple-task-2'); 
+      throw redirect(303, '/form-redirect/rouwtaak2'); 
     } else if (selectedAnswers.question2 === 'f2-i-3') {
-      throw redirect(303, '/multiple-task-3'); 
+      throw redirect(303, '/form-redirect/rouwtaak3'); 
     } else {
-      throw redirect(303, '/multiple-task-4'); 
+      throw redirect(303, '/form-redirect/rouwtaak4'); 
     }
   }
 };

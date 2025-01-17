@@ -2,7 +2,6 @@
   import QuestionSet from '../molecules/question-set.svelte';
   let currentStep = 0;
 
-  // content form
   let questions = [{
     legend: "Hoe denk je over het verlies?",
     name: "question1",
@@ -46,7 +45,6 @@
   }
 </script>
 
-<!-- form component-->
 <form  method="POST" action="?/submit">
   <div>
   {#each questions as question, index}
@@ -67,7 +65,7 @@
     <button class="curButton" type="button" on:click={nextStep} disabled={currentStep === questions.length - 1}>
       Volgende</button>
     {#if currentStep === questions.length - 1}
-      <button type="submit">Submit</button>
+      <button type="submit">Bekijk uw resultaat</button>
     {/if}
   </div>
 

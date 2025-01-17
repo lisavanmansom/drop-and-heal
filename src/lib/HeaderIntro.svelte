@@ -20,7 +20,7 @@
         margin-top: 2rem;
     }
 
-    h3 {
+    .header h3 {
         font-family: Calvino-Grande;
         font-size: 32px;
         font-weight: 100;
@@ -56,4 +56,14 @@
         background-color: white;
         border-radius: 10px;
     }
+
+    @media (min-width: 65rem){
+        .header {
+            padding: 0 2rem 0 2rem;
+        }
+
+        .header h3 {
+            font-size: 50px;
+        }
+    } 
 </style>

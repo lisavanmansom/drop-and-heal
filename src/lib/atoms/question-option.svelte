@@ -2,12 +2,10 @@
   let {name, value, labelText, bindGroup, ...others} = $props();
 </script>
 
-<!-- input component-->
 <label>
   <input type="radio" name={name} value={value} bind:group={bindGroup} />
   {labelText}
 </label>
-
 
 <style>
   input[type='radio'] {
@@ -16,12 +14,12 @@
   }
 
   label {
-    border: .1em solid var(--b-z);
-    border-radius: 15px;
+    border: 1px solid var(--b-z);
+    border-radius: 30px;
     cursor: pointer;
     font-size: 1.25em;
     overflow: hidden;
-    padding: .5em .45em;
+    padding: .6em 1.4em;
     position: relative;
   }
 

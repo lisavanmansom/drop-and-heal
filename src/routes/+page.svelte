@@ -5,10 +5,9 @@
 
 let button;
 
-// Functie om href aan te passen op basis van schermgrootte
 function updateButtonLink() {
     if (window.matchMedia("(min-width: 65rem)").matches) {
-        button.href = "./privacy";
+        button.href = "./introductie-algemeen";
     } else {
         button.href = "./uitleg-metafoor";
     }

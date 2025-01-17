@@ -3,7 +3,6 @@
   let {name, index, currentStep, value, labelText, selectedOption, options, legend, ...others} = $props();
 </script>
 
-<!-- fieldset component-->
 <fieldset class={index === currentStep ? 'show' : 'hide'}>
   <legend>{legend}</legend>
   {#each options as option}
@@ -22,7 +21,7 @@
     border: none;
     display: flex;
     flex-direction: column;
-    gap: 1.1em;
+    gap: 1.3em;
   }
 
   legend {

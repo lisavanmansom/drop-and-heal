@@ -8,7 +8,7 @@
         object-fit: contain;
         width: 100%;
         z-index: 5;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
     }
 
     @keyframes aGreen {
@@ -20,12 +20,9 @@
         }
     }
 
-    @media (min-width:575px) {
-        img { height: 17.5em; }
-    }
 
     @media (min-width:875px) {
-        img { height: 20em; }
+        img { height: 13em; }
     }
 
 </style>
